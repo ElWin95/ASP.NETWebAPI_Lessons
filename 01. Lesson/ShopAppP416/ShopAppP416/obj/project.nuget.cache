@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ENKtUl94JosECvCk//2r+i6lDLbdGs82bABWsoSjzrYqARQBu1XIL6LdoihRwKS2Uq/TVa72DaxX936yLJFHlQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\emust\\Documents\\ElvinP416\\05. ASP.NET Web API\\ASP.NETWebAPI_Lessons\\01. Lesson\\ShopAppP416\\ShopAppP416\\ShopAppP416.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\emust\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\emust\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\emust\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\emust\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\emust\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\emust\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
