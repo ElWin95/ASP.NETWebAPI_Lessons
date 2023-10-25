@@ -1,6 +1,6 @@
-﻿namespace ShopAppP416.Models
+﻿namespace ShopAppP416.Dtos.ProductDtos
 {
-    public class Product:BaseEntity
+    public class ProductCreateDto
     {
         public string Name { get; set; }
         public double SalePrice { get; set; }

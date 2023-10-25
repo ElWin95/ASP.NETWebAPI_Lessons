@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ShopAppP416.Data;
+using ShopAppP416.Dtos.ProductDtos;
 using ShopAppP416.Models;
 
 namespace ShopAppP416.Controllers
@@ -30,16 +31,21 @@ namespace ShopAppP416.Controllers
             return StatusCode(StatusCodes.Status200OK, product);
         }
         [HttpPost]
-        public IActionResult Create(Product product)
+        public IActionResult Create(ProductCreateDto product)
         {
-            _context.Products.Add(product);
+            Product newProduct = new();
+            newProduct.Name = product.Name;
+            newProduct.SalePrice = product.SalePrice;
+            newProduct.CostPrice = product.CostPrice;
+            _context.Products.Add(newProduct);
             _context.SaveChanges();
             return Ok(201);
         }
-        [HttpPut]
-        public IActionResult Update(Product product)
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, ProductUpdateDto product)
         {
-            var existProduct = _context.Products.FirstOrDefault(x => x.Id == product.Id);
+            if(id != product.Id) return BadRequest();
+            var existProduct = _context.Products.FirstOrDefault(x => x.Id == id);
             if (existProduct == null) return BadRequest();
             existProduct.Name = product.Name;
             existProduct.SalePrice = product.SalePrice;
