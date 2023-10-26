@@ -20,15 +20,42 @@ namespace ShopAppP416.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_context.Products.Where(p=>!p.IsDelete).ToList());
+            var query = _context.Products.AsQueryable();
+            ProductListReturnDto listReturnDto = new();
+            listReturnDto.TotalCount = query.Count();
+            foreach (var product in query.Where(p => !p.IsDelete).ToList())
+            {
+                ProductReturnDto productReturnDto = new();
+                productReturnDto.Name = product.Name;
+                productReturnDto.SalePrice = product.SalePrice;
+                productReturnDto.CostPrice = product.CostPrice;
+                productReturnDto.CreatedAt = product.CreatedAt;
+                productReturnDto.UpdateAt = product.UpdateAt;
+                productReturnDto.DeletedAt = product.DeletedAt;
+                listReturnDto.Items.Add(productReturnDto);
+
+            }
+            return Ok(listReturnDto);
         }
         [HttpGet("{id}")]
         public IActionResult GetOne(int? id)
         {
             if (id == null) return BadRequest();
-            var product = _context.Products.Where(p=>!p.IsDelete).FirstOrDefault(p=>p.Id == id);
-            if (product == null) return BadRequest();
-            return StatusCode(StatusCodes.Status200OK, product);
+            var productReturnDto = _context.Products
+                .Where(p => !p.IsDelete && p.Id == id)
+                .Select(p=>new ProductReturnDto
+                {
+                    Name = p.Name,
+                    CostPrice = p.CostPrice,
+                    SalePrice = p.SalePrice,
+                    CreatedAt = p.CreatedAt,
+                    UpdateAt = p.UpdateAt,
+                    DeletedAt = p.DeletedAt,
+                })
+                .FirstOrDefault();
+            if (productReturnDto == null) return BadRequest();
+
+            return StatusCode(StatusCodes.Status200OK, productReturnDto);
         }
         [HttpPost]
         public IActionResult Create(ProductCreateDto product)
