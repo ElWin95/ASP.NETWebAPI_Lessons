@@ -9,6 +9,7 @@ namespace ShopAppP416.Data
         {
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
         public override int SaveChanges()
         {
             var datas = ChangeTracker.Entries<BaseEntity>();

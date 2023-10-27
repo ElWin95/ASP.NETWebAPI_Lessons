@@ -18,23 +18,40 @@ namespace ShopAppP416.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Get(int page=1, int take=3, string search=null)
         {
             var query = _context.Products.AsQueryable();
+            if (!string.IsNullOrEmpty(search))
+            {
+                query = query.Where(p => p.Name.ToLower().Contains(search.ToLower()));
+            }
             ProductListReturnDto listReturnDto = new();
             listReturnDto.TotalCount = query.Count();
-            foreach (var product in query.Where(p => !p.IsDelete).ToList())
-            {
-                ProductReturnDto productReturnDto = new();
-                productReturnDto.Name = product.Name;
-                productReturnDto.SalePrice = product.SalePrice;
-                productReturnDto.CostPrice = product.CostPrice;
-                productReturnDto.CreatedAt = product.CreatedAt;
-                productReturnDto.UpdateAt = product.UpdateAt;
-                productReturnDto.DeletedAt = product.DeletedAt;
-                listReturnDto.Items.Add(productReturnDto);
+            listReturnDto.Items = query.Where(p => !p.IsDelete)
+                .Skip((page-1)*take)
+                .Take(take)
+                .Select(p=>new ProductReturnDto
+                {
+                    Name = p.Name,
+                    CostPrice = p.CostPrice,
+                    SalePrice = p.SalePrice,
+                    CreatedAt = p.CreatedAt,
+                    UpdateAt = p.UpdateAt,
+                    DeletedAt = p.DeletedAt,
+                })
+                .ToList();
+            //foreach (var product in products)
+            //{
+            //    ProductReturnDto productReturnDto = new();
+            //    productReturnDto.Name = product.Name;
+            //    productReturnDto.SalePrice = product.SalePrice;
+            //    productReturnDto.CostPrice = product.CostPrice;
+            //    productReturnDto.CreatedAt = product.CreatedAt;
+            //    productReturnDto.UpdateAt = product.UpdateAt;
+            //    productReturnDto.DeletedAt = product.DeletedAt;
+            //    listReturnDto.Items.Add(productReturnDto);
 
-            }
+            //}
             return Ok(listReturnDto);
         }
         [HttpGet("{id}")]
