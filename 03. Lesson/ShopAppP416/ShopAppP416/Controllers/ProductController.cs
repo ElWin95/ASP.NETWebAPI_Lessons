@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ShopAppP416.Data;
 using ShopAppP416.Dtos.ProductDtos;
 using ShopAppP416.Models;
@@ -38,6 +39,12 @@ namespace ShopAppP416.Controllers
                     CreatedAt = p.CreatedAt,
                     UpdateAt = p.UpdateAt,
                     DeletedAt = p.DeletedAt,
+                    Category= new()
+                    {
+                        Name= p.Category.Name,
+                        Id= p.Category.Id,
+                        ProductsCount= p.Category.Products.Count,
+                    }
                 })
                 .ToList();
             //foreach (var product in products)
@@ -60,7 +67,7 @@ namespace ShopAppP416.Controllers
             if (id == null) return BadRequest();
             var productReturnDto = _context.Products
                 .Where(p => !p.IsDelete && p.Id == id)
-                .Select(p=>new ProductReturnDto
+                .Select(p => new ProductReturnDto
                 {
                     Name = p.Name,
                     CostPrice = p.CostPrice,
@@ -68,19 +75,43 @@ namespace ShopAppP416.Controllers
                     CreatedAt = p.CreatedAt,
                     UpdateAt = p.UpdateAt,
                     DeletedAt = p.DeletedAt,
+                    Category = new()
+                    {
+                        Name = p.Category.Name,
+                        Id = p.Category.Id,
+                        ProductsCount = p.Category.Products.Count,
+                    }
                 })
                 .FirstOrDefault();
             if (productReturnDto == null) return BadRequest();
+            
+            //var existProduct = _context.Products
+            //    .Include(p => p.Category)
+            //    .ThenInclude(c=>c.Products)
+            //    .FirstOrDefault(p => p.Id == id);
+            //var productReturnDto = new ProductReturnDto()
+            //{
+            //    Name = existProduct.Name,
+            //    Category = new()
+            //    {
+            //        Id = existProduct.Category.Id,
+            //        Name = existProduct.Category.Name,
+            //        ProductsCount = existProduct.Category.Products.Count,
+            //    }
+            //};
 
             return StatusCode(StatusCodes.Status200OK, productReturnDto);
         }
         [HttpPost]
         public IActionResult Create(ProductCreateDto product)
         {
+            if(!_context.Categories.Any(c=>c.Id == product.CategoryId && !c.IsDelete)) return BadRequest();
+
             Product newProduct = new();
             newProduct.Name = product.Name;
             newProduct.SalePrice = product.SalePrice;
             newProduct.CostPrice = product.CostPrice;
+            newProduct.CategoryId = product.CategoryId;
             _context.Products.Add(newProduct);
             _context.SaveChanges();
             return Ok(201);
