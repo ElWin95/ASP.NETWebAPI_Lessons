@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ShopAppP416.Data.Configurations;
 using ShopAppP416.Models;
 
 namespace ShopAppP416.Data
@@ -31,6 +32,13 @@ namespace ShopAppP416.Data
                 }
             }
             return base.SaveChanges();
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            //modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfigurationsFromAssembly(this.GetType().Assembly);
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

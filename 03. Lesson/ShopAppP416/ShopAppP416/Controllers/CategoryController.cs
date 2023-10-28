@@ -90,6 +90,7 @@ namespace ShopAppP416.Controllers
                 .FirstOrDefault(c => c.Id == id);
             if (existCategory == null) return NotFound();
             existCategory.IsDelete = true;
+            existCategory.DeletedAt = DateTime.Now;
             _context.SaveChanges();
             return Ok(StatusCodes.Status204NoContent);
         }
