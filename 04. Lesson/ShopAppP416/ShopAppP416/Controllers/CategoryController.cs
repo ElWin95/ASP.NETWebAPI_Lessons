@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ShopAppP416.Data;
 using ShopAppP416.Dtos.CategoryDtos;
 using ShopAppP416.Models;
@@ -11,10 +13,12 @@ namespace ShopAppP416.Controllers
     public class CategoryController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly IMapper _mapper;
 
-        public CategoryController(AppDbContext context)
+        public CategoryController(AppDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
         [HttpGet]
         public IActionResult Get(int page=1, int take=2)
@@ -23,34 +27,27 @@ namespace ShopAppP416.Controllers
                 .Where(c => !c.IsDelete);
             CategoryListReturnDto categoryListReturnDto = new();
             categoryListReturnDto.TotalCount = query.Count();
-            categoryListReturnDto.Items = query
-                .Skip((page-1)*take)
+            var categories = query
+                .Include(c => c.Products)
+                .Skip((page - 1) * take)
                 .Take(take)
-                .Select(c=> new CategoryReturnDto
-                {
-                    Name = c.Name,
-                    CreatedAt = c.CreatedAt,
-                    UpdateAt = c.UpdateAt,
-                    DeletedAt = c.DeletedAt,
-                })
                 .ToList();
+
+            categoryListReturnDto.Items = _mapper.Map<List<CategoryReturnDto>>(categories);
+
             return Ok(categoryListReturnDto);
         }
         [HttpGet("{id}")]
         public IActionResult GetOne(int id)
         {
             if (id == null) return BadRequest();
-            var existCategoryReturnDto = _context.Categories
-                .Where (c=>!c.IsDelete && c.Id == id)
-                .Select(c=> new CategoryReturnDto
-                {
-                    Name = c.Name,
-                    CreatedAt = c.CreatedAt,
-                    DeletedAt = c.DeletedAt,
-                    UpdateAt = c.UpdateAt
-                })
-                .FirstOrDefault();
-            if (existCategoryReturnDto == null) return NotFound();
+            var existCategory = _context.Categories
+                .Include(c => c.Products)
+                .Where(c => !c.IsDelete)
+                .FirstOrDefault(c => c.Id == id);
+            if (existCategory == null) return NotFound();
+
+            var existCategoryReturnDto = _mapper.Map<CategoryReturnDto>(existCategory);
             return Ok(existCategoryReturnDto);
         }
         [HttpPost]

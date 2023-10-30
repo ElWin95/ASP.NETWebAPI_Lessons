@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ShopAppP416.Data;
@@ -12,10 +13,12 @@ namespace ShopAppP416.Controllers
     public class ProductController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly IMapper _mapper;
 
-        public ProductController(AppDbContext context)
+        public ProductController(AppDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -64,41 +67,13 @@ namespace ShopAppP416.Controllers
         [HttpGet("{id}")]
         public IActionResult GetOne(int? id)
         {
-            if (id == null) return BadRequest();
-            var productReturnDto = _context.Products
-                .Where(p => !p.IsDelete && p.Id == id)
-                .Select(p => new ProductReturnDto
-                {
-                    Name = p.Name,
-                    CostPrice = p.CostPrice,
-                    SalePrice = p.SalePrice,
-                    CreatedAt = p.CreatedAt,
-                    UpdateAt = p.UpdateAt,
-                    DeletedAt = p.DeletedAt,
-                    Category = new()
-                    {
-                        Name = p.Category.Name,
-                        Id = p.Category.Id,
-                        ProductsCount = p.Category.Products.Count,
-                    }
-                })
-                .FirstOrDefault();
-            if (productReturnDto == null) return BadRequest();
-            
-            //var existProduct = _context.Products
-            //    .Include(p => p.Category)
-            //    .ThenInclude(c=>c.Products)
-            //    .FirstOrDefault(p => p.Id == id);
-            //var productReturnDto = new ProductReturnDto()
-            //{
-            //    Name = existProduct.Name,
-            //    Category = new()
-            //    {
-            //        Id = existProduct.Category.Id,
-            //        Name = existProduct.Category.Name,
-            //        ProductsCount = existProduct.Category.Products.Count,
-            //    }
-            //};
+            //if (id == null) return BadRequest();
+            var product = _context.Products
+                .Include(p => p.Category)
+                .Where(p => !p.IsDelete)
+                .FirstOrDefault(p => p.Id == id);
+            if (product == null) return BadRequest();
+            var productReturnDto = _mapper.Map<ProductReturnDto>(product);
 
             return StatusCode(StatusCodes.Status200OK, productReturnDto);
         }
