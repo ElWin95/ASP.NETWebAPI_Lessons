@@ -14,11 +14,13 @@ namespace ShopAppP416.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IConfiguration _configuration;
 
-        public CategoryController(AppDbContext context, IMapper mapper)
+        public CategoryController(AppDbContext context, IMapper mapper, IConfiguration configuration)
         {
             _context = context;
             _mapper = mapper;
+            _configuration = configuration;
         }
         [HttpGet]
         public IActionResult Get(int page=1, int take=2)

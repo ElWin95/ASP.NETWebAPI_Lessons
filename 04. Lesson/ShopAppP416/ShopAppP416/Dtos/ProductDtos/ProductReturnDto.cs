@@ -7,6 +7,8 @@ namespace ShopAppP416.Dtos.ProductDtos
         public string Name { get; set; }
         public double SalePrice { get; set; }
         public double CostPrice { get; set; }
+        public double Profit { get; set; }
+        public int Day { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdateAt { get; set; }
         public DateTime DeletedAt { get; set; }
