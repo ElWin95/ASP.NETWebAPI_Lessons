@@ -11,6 +11,9 @@ namespace ShopAppP416.Data.Configurations
             builder.Property(c => c.Name)
                 .IsRequired()
                 .HasMaxLength(50);
+            builder.Property(c => c.ImageUrL)
+                .IsRequired()
+                .HasMaxLength(150);
         }
     }
 }

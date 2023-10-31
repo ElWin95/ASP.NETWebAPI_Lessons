@@ -6,6 +6,7 @@ namespace ShopAppP416.Dtos.CategoryDtos
     public class CategoryCreateDto
     {
         public string Name { get; set; }
+        public IFormFile Photo { get; set; }
     }
     public class CategoryCreateDtoValidator: AbstractValidator<CategoryCreateDto>
     {

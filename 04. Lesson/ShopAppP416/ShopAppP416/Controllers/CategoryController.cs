@@ -51,13 +51,21 @@ namespace ShopAppP416.Controllers
             return Ok(existCategoryReturnDto);
         }
         [HttpPost]
-        public IActionResult Create(CategoryCreateDto category)
+        public IActionResult Create([FromForm]CategoryCreateDto category)
         {
             if (_context.Categories.Any(c => c.Name.ToLower() == category.Name.ToLower() && !c.IsDelete))
             {
                 return BadRequest();
             }
             Category newCategory = new();
+            if (category.Photo.Length>0 && category.Photo.ContentType.Contains("image"))
+            {
+                var fileName = Guid.NewGuid() + Path.GetExtension(category.Photo.FileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", fileName);
+                using FileStream fileStream = new(path, FileMode.Create);
+                category.Photo.CopyTo(fileStream);
+                newCategory.ImageUrL = fileName;
+            }
             newCategory.Name = category.Name;
             _context.Categories.Add(newCategory);
             _context.SaveChanges();

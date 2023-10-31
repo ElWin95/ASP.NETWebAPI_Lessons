@@ -3,6 +3,7 @@
     public class CategoryReturnDto
     {
         public string Name { get; set; }
+        public string ImageUrl { get; set; }
         public bool IsDelete { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdateAt { get; set; }
