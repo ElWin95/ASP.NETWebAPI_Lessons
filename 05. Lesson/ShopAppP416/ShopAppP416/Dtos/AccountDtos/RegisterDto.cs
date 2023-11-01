@@ -10,7 +10,7 @@ namespace ShopAppP416.Dtos.AccountDtos
         public string Password { get; set; }
         public string RepeatPassword { get; set; }
     }
-    class RegisterDtoValidator:AbstractValidator<RegisterDto>
+    public class RegisterDtoValidator:AbstractValidator<RegisterDto>
     {
         public RegisterDtoValidator()
         {
