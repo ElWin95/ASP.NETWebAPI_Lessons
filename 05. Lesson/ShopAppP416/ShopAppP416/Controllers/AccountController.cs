@@ -12,14 +12,16 @@ namespace ShopAppP416.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly SignInManager<AppUser> _signInManager;
 
-        public AccountController(UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager)
+        public AccountController(UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<AppUser> signInManager)
         {
             _userManager = userManager;
             _roleManager = roleManager;
+            _signInManager = signInManager;
         }
 
-        [HttpPost]
+        [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDto registerDto)
         {
             var user = await _userManager.FindByEmailAsync(registerDto.Email);
@@ -43,6 +45,22 @@ namespace ShopAppP416.Controllers
             await _roleManager.CreateAsync(new IdentityRole { Name = "Member" });
             await _roleManager.CreateAsync(new IdentityRole { Name = "SuperAdmin" });
             return Ok(201);
+        }
+     
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(LoginDto loginDto)
+        {
+            var user = await _userManager.FindByNameAsync(loginDto.UserNameOrEmail);
+            if(user == null)
+            {
+                user = await _userManager.FindByEmailAsync(loginDto.UserNameOrEmail);
+                if (user == null) return NotFound();
+            }
+            var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+            
+            if (!result.Succeeded) return NotFound();
+
+            return Ok(new {Token="", Message = "successfully login" });
         }
     }
 }
