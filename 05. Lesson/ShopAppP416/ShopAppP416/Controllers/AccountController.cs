@@ -1,8 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using ShopAppP416.Dtos.AccountDtos;
 using ShopAppP416.Models;
+using ShopAppP416.Services;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace ShopAppP416.Controllers
 {
@@ -13,12 +18,16 @@ namespace ShopAppP416.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly IConfiguration _config;
+        private readonly IJwtService _jwtService;
 
-        public AccountController(UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<AppUser> signInManager)
+        public AccountController(UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<AppUser> signInManager, IConfiguration config, IJwtService jwtService)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _signInManager = signInManager;
+            _config = config;
+            _jwtService = jwtService;
         }
 
         [HttpPost("register")]
@@ -60,7 +69,9 @@ namespace ShopAppP416.Controllers
             
             if (!result.Succeeded) return NotFound();
 
-            return Ok(new {Token="", Message = "successfully login" });
+
+
+            return Ok(new {Token=_jwtService.CreateJwt(_config, user), Message = "successfully login" });
         }
     }
 }
