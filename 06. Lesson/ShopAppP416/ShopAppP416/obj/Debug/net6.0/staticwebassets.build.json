@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "E5GVqqTr4/uiSll+Qf9jKfpPYxKzrFpiaTECby979uo=",
+  "Source": "ShopAppP416",
+  "BasePath": "_content/ShopAppP416",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ShopAppP416\\wwwroot",
+      "Source": "ShopAppP416",
+      "ContentRoot": "C:\\Users\\emust\\Documents\\ElvinP416\\05. ASP.NET Web API\\ASP.NETWebAPI_Lessons\\06. Lesson\\ShopAppP416\\ShopAppP416\\wwwroot\\",
+      "BasePath": "_content/ShopAppP416",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\emust\\Documents\\ElvinP416\\05. ASP.NET Web API\\ASP.NETWebAPI_Lessons\\06. Lesson\\ShopAppP416\\ShopAppP416\\wwwroot\\img\\d0ff3e89-dd5e-4dc6-bed2-e93be441c1c3.jpg",
+      "SourceId": "ShopAppP416",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emust\\Documents\\ElvinP416\\05. ASP.NET Web API\\ASP.NETWebAPI_Lessons\\06. Lesson\\ShopAppP416\\ShopAppP416\\wwwroot\\",
+      "BasePath": "_content/ShopAppP416",
+      "RelativePath": "img/d0ff3e89-dd5e-4dc6-bed2-e93be441c1c3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\d0ff3e89-dd5e-4dc6-bed2-e93be441c1c3.jpg"
+    }
+  ]
+}
