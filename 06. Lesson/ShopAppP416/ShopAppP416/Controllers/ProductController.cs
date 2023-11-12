@@ -24,7 +24,7 @@ namespace ShopAppP416.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles ="SuperAdmin")]
+        [Authorize(Roles ="Admin")]
         public IActionResult Get(int page=1, int take=3, string search=null)
         {
             var query = _context.Products.Where(p => !p.IsDelete);
@@ -66,6 +66,15 @@ namespace ShopAppP416.Controllers
             newProduct.SalePrice = product.SalePrice;
             newProduct.CostPrice = product.CostPrice;
             newProduct.CategoryId = product.CategoryId;
+            newProduct.ProductTags = new();
+            foreach (var tagId in product.TagIds)
+            {
+                ProductTag newProductTag = new ();
+                newProductTag.TagId = tagId;
+                newProductTag.ProductId = newProduct.Id;
+
+                newProduct.ProductTags.Add(newProductTag);
+            }
             _context.Products.Add(newProduct);
             _context.SaveChanges();
             return Ok(201);
