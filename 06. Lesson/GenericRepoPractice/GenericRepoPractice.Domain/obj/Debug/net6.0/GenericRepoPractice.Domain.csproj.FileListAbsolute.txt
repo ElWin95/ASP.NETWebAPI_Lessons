@@ -1,0 +1,22 @@
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.Domain\bin\Debug\net6.0\GenericRepoPractice.Domain.deps.json
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.Domain\bin\Debug\net6.0\GenericRepoPractice.Domain.dll
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.Domain\bin\Debug\net6.0\GenericRepoPractice.Domain.pdb
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\GenericRepoPractice.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\GenericRepoPractice.Domain.AssemblyInfoInputs.cache
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\GenericRepoPractice.Domain.AssemblyInfo.cs
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\GenericRepoPractice.Domain.csproj.CoreCompileInputs.cache
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\GenericRepoPractice.Domain.dll
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\refint\GenericRepoPractice.Domain.dll
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\GenericRepoPractice.Domain.pdb
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\ref\GenericRepoPractice.Domain.dll
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.Domain\bin\Debug\net6.0\GenericRepoPractice.Domain.deps.json
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.Domain\bin\Debug\net6.0\GenericRepoPractice.Domain.dll
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.Domain\bin\Debug\net6.0\GenericRepoPractice.Domain.pdb
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\GenericRepoPractice.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\GenericRepoPractice.Domain.AssemblyInfoInputs.cache
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\GenericRepoPractice.Domain.AssemblyInfo.cs
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\GenericRepoPractice.Domain.csproj.CoreCompileInputs.cache
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\GenericRepoPractice.Domain.dll
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\refint\GenericRepoPractice.Domain.dll
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\GenericRepoPractice.Domain.pdb
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.Domain\obj\Debug\net6.0\ref\GenericRepoPractice.Domain.dll

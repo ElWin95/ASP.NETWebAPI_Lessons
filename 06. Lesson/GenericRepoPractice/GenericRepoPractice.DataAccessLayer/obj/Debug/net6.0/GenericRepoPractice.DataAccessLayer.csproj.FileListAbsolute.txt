@@ -1,0 +1,34 @@
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\bin\Debug\net6.0\GenericRepoPractice.DataAccessLayer.deps.json
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\bin\Debug\net6.0\GenericRepoPractice.DataAccessLayer.runtimeconfig.json
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\bin\Debug\net6.0\GenericRepoPractice.DataAccessLayer.dll
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\bin\Debug\net6.0\GenericRepoPractice.DataAccessLayer.pdb
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\bin\Debug\net6.0\GenericRepoPractice.Domain.dll
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\bin\Debug\net6.0\GenericRepoPractice.Domain.pdb
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.AssemblyInfo.cs
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.csproj.CopyComplete
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.dll
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\refint\GenericRepoPractice.DataAccessLayer.dll
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.pdb
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.genruntimeconfig.cache
+C:\Users\elvinma\Documents\ElvinP416\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\ref\GenericRepoPractice.DataAccessLayer.dll
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\bin\Debug\net6.0\GenericRepoPractice.DataAccessLayer.deps.json
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\bin\Debug\net6.0\GenericRepoPractice.DataAccessLayer.runtimeconfig.json
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\bin\Debug\net6.0\GenericRepoPractice.DataAccessLayer.dll
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\bin\Debug\net6.0\GenericRepoPractice.DataAccessLayer.pdb
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\bin\Debug\net6.0\GenericRepoPractice.Domain.dll
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\bin\Debug\net6.0\GenericRepoPractice.Domain.pdb
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.AssemblyInfo.cs
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.csproj.CopyComplete
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.dll
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\refint\GenericRepoPractice.DataAccessLayer.dll
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.pdb
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\GenericRepoPractice.DataAccessLayer.genruntimeconfig.cache
+C:\Users\emust\Documents\ElvinP416\05. ASP.NET Web API\ASP.NETWebAPI_Lessons\06. Lesson\GenericRepoPractice\GenericRepoPractice.DataAccessLayer\obj\Debug\net6.0\ref\GenericRepoPractice.DataAccessLayer.dll
